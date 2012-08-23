@@ -1,0 +1,20 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1345743296.556971:@value{	I"length:EFiöI"digest;
+F"%d00200ee5b3bd83ed41b5282524eac3cI"source;
+FI"ö
+  $(document).ready(function() {
+    $('body').bind('click', function() {
+      return $('.dropdown-toggle, .menu').parent("li").removeClass("open");
+    });
+    $(".dropdown-toggle, .menu").click(function() {
+      var li;
+      li = $(this).parent("li").toggleClass('open');
+      return false;
+    });
+    jQuery(top).trigger('initialize:frame');
+    return $(window).bind('mercury:saved', function() {
+      return window.location = window.location.href.replace(/\/editor\//i, '/');
+    });
+  });
+;
+FI"_version;
+F"%efaaba0be53e4292023440ee0018314a

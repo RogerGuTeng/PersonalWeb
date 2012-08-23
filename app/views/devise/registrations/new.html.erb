@@ -1,0 +1,43 @@
+<section id="signup">
+  <div class="page-header">
+    <h1>Sign up</h1>
+  </div>
+  <div class="row">
+    <div class="span4 columns">
+      <!--<h3>Default styles</h3>-->
+      <p>please enter a valid email address since it will be used to send an confirmation email to you</p>
+      <p>your data will only be used to as part of this service and never given to any third parties. And we will not
+      spam you. ever. </p>
+    </div>
+
+    <div class="span12 columns">
+
+      <%= twitter_bootstrap_form_for resource, :as => resource_name, :url => registration_path(resource_name) do |f|  %>
+
+          <%= devise_error_messages! %>
+
+          <%= f.inputs do %>
+            <%= f.text_field :name, :placeholder => 'mynickname'%>
+            <%= f.email_field :email, :placeholder => 'me@example.com', :class => "large" %>
+            <%= f.password_field :password do %>
+                  <span class="help-block">Must be at least 6 characters</span>
+            <% end %>
+            <%= f.password_field :password_confirmation, 'Confirm Password' %>
+
+            <%= f.actions do %>
+                <%= f.submit 'Sign up'%>
+                <%= button_tag  'Cancel', :type => 'reset', :class => 'btn'%>
+            <% end %>
+
+
+          <% end %>
+
+      <% end %>
+
+
+      <%= render :partial => "devise/shared/links" %>
+    </div>
+
+  </div><!-- /row -->
+  <br>
+</section>

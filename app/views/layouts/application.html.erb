@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rails - Bootstrap</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "app/app" %>
+
+    <!-- Le javascript -->
+    <%= javascript_include_tag "application" %>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="/assets/ico/bootstrap-apple-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/ico/bootstrap-apple-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/ico/bootstrap-apple-114x114.png">
+
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body id="<%= params[:controller]%>">
+
+    <!-- Topbar
+    ================================================== -->
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container">
+          <h3><a href="<%= root_url%>"> <%= image_tag('bootstrap-logo.png', :alt => 'Bootstrap') %> </a></h3>
+          <ul class="nav">
+            <%= nav_item "Home", root_path %>
+            <%= nav_item "Documentation", doc_path() %>
+            <li class="dropdown">
+              <a class="dropdown-toggle" href="#">Pages</a>
+              <ul class="dropdown-menu">
+                <% if user_signed_in? %>
+                    <li><%= link_to "Create new Page", new_page_path %></li>
+                    <% if is_page? %>
+                        <li><%= link_to "Delete Page", page_path(params[:id]), :confirm => "srsly, mate ?", :method => 'delete' %></li>
+                    <% end %>
+                    <li class="divider"></li>
+                <% end %>
+              </ul>
+            </li>
+            <%= nav_item "Contact", contact_path %>
+            <%= nav_item "About", about_path%>
+          </ul>
+
+          <ul class="nav secondary-nav">
+            <% if user_signed_in? %>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#"><%= current_user.name %> <%= current_user.email %></a>
+                    <ul class="dropdown-menu">
+                        <li><%=link_to("Edit User Account", edit_user_registration_path) %></li>
+                        <li><a href="#">Edit User Profile</a></li>
+                        <li class="divider"></li>
+                        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+                    </ul>
+                </li>
+            <% else %>
+                <li><%= link_to('Login', new_user_session_path) %></li>
+                <li><%= link_to('Register', new_user_registration_path) %></li>
+            <%end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="main-content">
+        <% if content_for?(:no_container) %>
+            <%= yield (:no_container) %>
+        <% else %>
+          <div class="container">
+             <%= render :partial => 'shared/flash_msg' %>
+             <%= yield %>
+          </div>
+        <%end %>
+    </div>
+
+    <footer id="footer">
+      <div class="inner">
+        <div class="container">
+          <div class="row">
+            <div class="span3 columns">
+                <% if controller.controller_name  == "pages" && controller.action_name == 'show' && user_signed_in? %>
+                  <p><%= link_to "Edit this page", mercury_editor_path+request.path, id: "edit_link" %></p>
+                <% end %>
+                <p><a href="https://github.com/RogerGuTeng">Fork me on Github</a></p>
+                <!--<p><a data-controls-modal="modal_1" data-backdrop="static" >Launch Modal</a></p>-->
+            </div>
+
+            <div class="span10 columns">
+              <p class="center">
+                <%=link_to("About", pages_url('about')) %>
+                <%=link_to("Terms of Service", pages_url('terms')) %>
+                <%=link_to("Contact", pages_url('contact')) %>
+              </p>
+            </div>
+
+            <div class="span3 columns">
+                <p>
+                <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="modal_1" class="modal hide fade">
+      <div class="modal-header">
+        <a href="#" class="close">&times;</a>
+        <h3>Modal Heading</h3>
+      </div>
+      <div class="modal-body">
+
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn primary">Primary</a>
+        <a href="#" class="btn secondary">Secondary</a>
+      </div>
+    </div>
+
+  </body>
+</html>

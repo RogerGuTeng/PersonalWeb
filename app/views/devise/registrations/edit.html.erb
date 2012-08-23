@@ -1,0 +1,35 @@
+<section id="signup">
+  <div class="page-header">
+    <h1>Edit <%= resource_name.to_s.humanize %></h1>
+  </div>
+  <div class="row">
+    <div class="span4 columns">
+      <h3></h3>
+      <p>please not that the email address is used to identify the account and
+      cannot be changed.</p>
+    </div>
+
+    <div class="span12 columns">
+        <%= twitter_bootstrap_form_for resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }  do |f|  %>
+              <%= devise_error_messages! %>
+              <%= f.inputs do %>
+                <%= f.text_field :name, :placeholder => 'mynickname'%>
+                <%= f.email_field :email, :placeholder => 'me@example.com', :class => "large" %>
+                <%= f.password_field :password %>
+                <%= f.password_field :password_confirmation, 'Confirm Password' %>
+                <%= f.password_field :current_password , 'Current Password' do %>
+                    <span class="help-block"><strong>Note:</strong> we need your current password to confirm your changes.</span>
+                <% end %>
+
+                <%= f.actions do %>
+                  <%= f.submit 'Update'%>
+                <% end %>
+              <% end %>
+      <% end %>
+
+      <%= render :partial => "devise/shared/links" %>
+    </div>
+
+  </div><!-- /row -->
+  <br>
+</section>

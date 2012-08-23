@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1345743306.3920782:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%5c2a7280abaf990501fc8041d8f13563I"logical_path;
+FI"grid-18px.png;
+TI"pathname;
+FI"*$root/app/assets/images/grid-18px.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-08-23T11:27:38-04:00;
+FI"length;
+FI"	1118;
+FI"digest;
+F"%5a770cd6fa2122a7de7e038f4365badaI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

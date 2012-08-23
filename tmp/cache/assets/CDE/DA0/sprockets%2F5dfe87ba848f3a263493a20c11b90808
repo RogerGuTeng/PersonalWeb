@@ -1,0 +1,64 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1345743296.43898:@value{	I"length:EFiåI"digest;
+F"%d12c694937ea540ed95540216f1f74c1I"source;
+FI"å/* Variables.less
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+/* Mixins.less
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
+#main-content {
+  padding-top: 42px;
+}
+section {
+  padding-top: 25px;
+}
+#flashbox {
+  padding-top: 10px;
+}
+#flashbox div div.alert-message {
+  margin-bottom: 1px;
+}
+#main #banner {
+  background-image: url("/assets/capture-2.png"), url("/assets/banner-pg-2.svg");
+  background-position: 90% 35%, left top ;
+  background-repeat: no-repeat;
+  padding-left: 2em;
+  padding-top: 1em;
+  height: 300px;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+#main #banner h1 {
+  color: #333333;
+  font-size: 32px;
+  padding: 20px 420px 0 20px;
+  text-shadow: 2px 2px 3px #FFFFFF;
+}
+#main #banner h2 {
+  color: #555555;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 420px 0 20px;
+  text-shadow: 2px 2px 3px #FFFFFF;
+}
+#main #banner .buttonbar {
+  margin-top: 40px;
+}
+#main #banner .buttonbar a {
+  margin-left: 20px;
+}
+#main .items {
+  margin-top: 30px;
+}
+#footer {
+  margin-top: 80px;
+}
+#footer p a {
+  padding: 0 8px;
+}
+#footer p.center {
+  text-align: center;
+}
+;
+FI"_version;
+F"%37e1bd08d889dbf44ddbf36a4617d9a7

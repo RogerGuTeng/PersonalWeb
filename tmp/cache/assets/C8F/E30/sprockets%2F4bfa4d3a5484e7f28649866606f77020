@@ -1,0 +1,18 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1345743296.675583:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%9aaac0b78dd572ce24353f7307290c8bI"logical_path;
+FI"capture-2.png;
+TI"pathname;
+FI"*$root/app/assets/images/capture-2.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-08-23T11:27:38-04:00;
+FI"length;
+FI"
+18404;
+FI"digest;
+F"%61cd4064689dc57478b7fc3c617be789I"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

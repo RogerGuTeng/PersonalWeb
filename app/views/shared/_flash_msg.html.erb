@@ -1,0 +1,9 @@
+
+<% if  flash.now[:alert] || flash.now[:notice] %>
+    <div id="flashbox" class="row">
+        <div class="span12">
+            <%=alert(flash.now[:alert], "error") if flash.now[:alert] %>
+            <%=alert(flash.now[:notice], "success") if flash.now[:notice] %>
+        </div>
+    </div>
+<% end %>

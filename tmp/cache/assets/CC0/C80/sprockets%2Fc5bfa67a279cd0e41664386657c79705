@@ -1,0 +1,17 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1345743296.687029:@value{I"
+class:EFI"StaticAsset;
+FI"id;
+F"%425c00f87abbec61f53bcb71afaaa64bI"logical_path;
+FI"bootstrap-logo.png;
+TI"pathname;
+FI"/$root/app/assets/images/bootstrap-logo.png;
+FI"content_type;
+FI"image/png;
+FI"
+mtime;
+FI"2012-08-23T11:27:38-04:00;
+FI"length;
+FI"	5931;
+FI"digest;
+F"%256a5b1fd022d88bf7585b92e2c2592cI"_version;
+F"%46dde6621c301f4928e3b34efee9e3b5

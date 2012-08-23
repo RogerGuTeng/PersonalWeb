@@ -1,0 +1,62 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1345743306.36422:@value{	I"length:EFiœI"digest;
+F"%a5f2b9b40ef3884dd8b7f2c2307a66dcI"source;
+FI"œ$(document).ready(function(){
+
+  // Google code prettify
+  // ====================
+  prettyPrint();
+
+
+  // table sort example
+  // ==================
+
+  $("#sortTableExample").tablesorter( { sortList: [[ 1, 0 ]] } )
+
+
+  // add on logic
+  // ============
+
+  $('.add-on :checkbox').click(function () {
+    if ($(this).attr('checked')) {
+      $(this).parents('.add-on').addClass('active')
+    } else {
+      $(this).parents('.add-on').removeClass('active')
+    }
+  })
+
+
+  // Disable certain links in docs
+  // =============================
+  // Please do not carry these styles over to your projects, it's merely here to prevent button clicks form taking you away from your spot on page
+
+  $('ul.tabs a, ul.pills a, .pagination a, .well .btn, .actions .btn, .alert-message .btn, a.close').click(function (e) {
+    e.preventDefault()
+  })
+
+  // Copy code blocks in docs
+  $(".copy-code").focus(function () {
+    var el = this;
+    // push select to event loop for chrome :{o
+    setTimeout(function () { $(el).select(); }, 0);
+  });
+
+
+  // POSITION STATIC TWIPSIES
+  // ========================
+
+  $(window).bind( 'load resize', function () {
+    $(".twipsies a").each(function () {
+       $(this)
+        .twipsy({
+          live: false
+        , placement: $(this).attr('title')
+        , trigger: 'manual'
+        , offset: 2
+        })
+        .twipsy('show')
+      })
+  })
+});
+;
+FI"_version;
+F"%c035e164d0d5ed90f58f2227dff8a4c5

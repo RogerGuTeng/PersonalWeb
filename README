@@ -1,0 +1,13 @@
+Bootstrap - Rails
+===================
+
+this is a Rails 3.1 sample application based on the wonderful Twitter - Bootstrap (http://github.com/twitter/bootstrap)
+template.
+
+It integrates via the asset pipeline, adds a sample homepage and support for authentication via
+devise (on the "bootstrap-auth" feature branch) and is meant as a quick starting point for whatever.
+
+if you think this might be useful for you somehow, please feel free to fork and add features.
+
+A live demo of the bootstrap-auth available at http://bootstrap.stage42.net (heroku, single dyno, so give it some time to
+spin up and be kind in general ...)

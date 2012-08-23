@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'twitter_bootstrap_form_for', :git =>  'git://github.com/softmachine/twitter_bootstrap_form_for.git'
 #gem 'mercury-rails', :git => 'https://github.com/jejacks0n/mercury.git'
+gem "therubyracer"
 
 
 group :development do

@@ -172,6 +172,7 @@ DEPENDENCIES
   rspec-rails (= 2.6.1)
   sass-rails (~> 3.1.0)
   sqlite3
+  therubyracer
   tilt
   turn
   twitter_bootstrap_form_for!

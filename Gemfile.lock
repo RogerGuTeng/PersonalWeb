@@ -6,15 +6,6 @@ GIT
       actionpack (~> 3)
       railties (~> 3)
 
-GIT
-  remote: https://github.com/jejacks0n/mercury.git
-  revision: 38df02f55e55b1656581b893b14a6e3e006f9b78
-  specs:
-    mercury-rails (0.2.3)
-      coffee-script
-      paperclip
-      rails (~> 3.1.0)
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -52,7 +43,6 @@ GEM
     bcrypt-ruby (3.0.1)
     bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.0)
-    cocaine (0.2.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -95,11 +85,6 @@ GEM
     mime-types (1.17.2)
     multi_json (1.0.3)
     orm_adapter (0.0.5)
-    paperclip (2.4.5)
-      activerecord (>= 2.3.0)
-      activesupport (>= 2.3.2)
-      cocaine (>= 0.0.2)
-      mime-types
     pg (0.11.0)
     pg (0.11.0-x86-mingw32)
     polyglot (0.3.3)
@@ -182,7 +167,6 @@ DEPENDENCIES
   faker
   jquery-rails
   less-rails
-  mercury-rails!
   pg
   rails (= 3.1.0)
   rspec-rails (= 2.6.1)

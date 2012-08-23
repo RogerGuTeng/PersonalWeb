@@ -5,7 +5,7 @@ Bootstrap::Application.routes.draw do
 
   resources :pages
   match '/editor(/*requested_uri)' => "page_editor#edit", :as => :mercury_editor
-  Mercury::Engine.routes
+    #Mercury::Engine.routes
 
 
   put 'about' => 'pages#update',:defaults => { :id => 'about' }
